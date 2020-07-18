@@ -1,0 +1,94 @@
+body, html {
+	background: black;
+	width: 100%;
+	height: 100%;
+}
+
+
+input, button {
+	background-color: transparent;
+	color: white;
+	width: 60%;
+	display:block;
+	font-size: 1.4em;
+	margin: 5px auto;
+	padding: 5px 0px 5px 0px;	
+	outline: 0;
+	border: 0;
+	border-bottom: 1px solid white;
+}
+
+button {
+	cursor: pointer;
+	padding: 5px 0px 5px 0px;	
+	text-align: center;
+	background-color: rgba(0,0,0,0.5);
+	color: white;
+	border: 0;
+	border-radius: 5px;
+	width: 120px;
+	height: 120px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-left: -60px;
+	margin-right: -60px;
+}
+
+
+.hidden {
+	display: none;
+}
+
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+#loader-container {
+	background-color: rgba(0, 0, 0, 0.5);
+	z-index: 100;
+	position: absolute;
+	width:100%;
+	height:100%;
+}
+#loader-container #loader {
+	border: 16px solid #f3f3f3;
+	border-radius: 50%;
+	border-top: 16px solid #3498db;
+	width: 120px;
+	height: 120px;
+	-webkit-animation: spin 2s linear infinite; /* Safari */
+	animation: spin 2s linear infinite;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-left: -60px;
+	margin-right: -60px;
+}
+
+#dir-pad {
+	display: none;
+	opacity: 0.3;
+	background-image:url('/public/images/dir-pad.svg');
+	padding: 5px;	
+	background-size: contain;
+	background-repeat: no-repeat;
+	position: absolute;
+	width: 120px;
+	height: 120px;
+	bottom: 7%;
+	left: 50%;
+	margin-left: -60px;
+	margin-right: -60px;
+}
+
+@media only screen and (max-width: 768px) {
+	#dir-pad {
+		display:block;
+	}
+}
